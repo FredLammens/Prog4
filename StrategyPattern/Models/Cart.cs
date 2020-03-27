@@ -22,7 +22,10 @@ namespace StrategyPattern.Models
         }
         public void MakePayment(IPaymentStrategy strategy) 
         {
-            strategy.Pay();
+            foreach (Product product in products)
+            {
+            strategy.Pay(product);
+            }
         }
     }
 }
