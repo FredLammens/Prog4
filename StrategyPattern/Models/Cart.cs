@@ -21,15 +21,17 @@ namespace StrategyPattern.Models
         }
         public void MakePayment(IPaymentStrategy Wallet, IPaymentStrategy Paypal)
         {
-                foreach (Product product in products)
+            foreach (Product product in products)
+            {
+                if (!Wallet.Pay(product))
                 {
-                if (Wallet.Pay(product)) { }
-                else if (Paypal.Pay(product)) { }
-                else 
+                    Paypal.Pay(product);
+                }
+                else
                 {
                     System.Console.WriteLine("Al het geld is op ! :(");
                 }
-                }
+            }
         }
         public void MakePayment(IPaymentStrategy strategy)
         {

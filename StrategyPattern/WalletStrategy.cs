@@ -20,10 +20,10 @@ namespace StrategyPattern
                 Console.WriteLine("paid using In-Game Wallet.");
                 return true;
             }
-            else 
+            else
             {
                 Console.WriteLine("Budget is niet genoeg voor deze product te kunnen kopen.");
-            return false;
+                return false;
             }
         }
 
@@ -36,7 +36,7 @@ namespace StrategyPattern
                 return true;
             }
             else
-            { 
+            {
                 Console.WriteLine("Budget is niet genoeg voor deze product te kunnen kopen.");
                 return false;
             }

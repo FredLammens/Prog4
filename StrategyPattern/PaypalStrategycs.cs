@@ -22,7 +22,7 @@ namespace StrategyPattern
                 return true;
             }
             else
-            { 
+            {
                 Console.WriteLine($"user : {gebruikersnaam} is not logged in.");
                 return false;
             }
