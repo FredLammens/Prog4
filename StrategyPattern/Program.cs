@@ -14,8 +14,8 @@ namespace StrategyPattern
             shoppingCart.AddProduct(new Sticker(5));
             shoppingCart.AddProduct(new Poster(10));
             //MAkepayment aanroepen
-            var payal = new PaypalStrategycs("frederic", "1234", 10000.00m);
-            payal.Login("1234");
+            var paypal = new PaypalStrategycs("frederic", "1234");
+            paypal.Login("1234");
             shoppingCart.MakePayment(paypal);
             shoppingCart.MakePayment(new WalletStrategy(-9.123m));
         }

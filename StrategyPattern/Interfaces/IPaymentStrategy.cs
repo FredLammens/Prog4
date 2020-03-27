@@ -1,12 +1,10 @@
 ﻿using StrategyPattern.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace StrategyPattern.Interfaces
 {
     interface IPaymentStrategy
     {
-        void Pay(Product product);
+        bool Pay(Product product);
+        bool Pay(int totaalprijs);
     }
 }

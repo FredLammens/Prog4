@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StrategyPattern.Models
+﻿namespace StrategyPattern.Models
 {
     public abstract class Product
     {

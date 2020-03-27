@@ -28,11 +28,11 @@ namespace BankAccountNS
         {
             if (amount > m_balance)
             {
-                throw new ArgumentOutOfRangeException("amount",amount,DebitAmountExceedsBalanceMessage);
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountExceedsBalanceMessage);
             }
             if (amount < 0)
             {
-                throw new ArgumentOutOfRangeException("amount",amount,DebitAmountLessThanZeroMessage);
+                throw new ArgumentOutOfRangeException("amount", amount, DebitAmountLessThanZeroMessage);
             }
             m_balance -= amount; // intentionally incorrect code
         }

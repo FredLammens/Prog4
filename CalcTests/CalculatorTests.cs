@@ -30,7 +30,7 @@ namespace CalcTests
             //Act
             double actual = calc.Subtract(getal1, getal2);
             //Assert
-            Assert.AreEqual(expected, actual,0.001, "Substracted not correctly");
+            Assert.AreEqual(expected, actual, 0.001, "Substracted not correctly");
         }
 
         [TestMethod()]

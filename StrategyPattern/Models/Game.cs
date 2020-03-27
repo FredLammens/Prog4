@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StrategyPattern.Models
+﻿namespace StrategyPattern.Models
 {
     public class Game : Product
     {
-        public Game(int price) 
+        public int price { get; private set; }
+        public Game(int price)
         {
-            this.Price = price;
+            this.price = price;
         }
     }
 }

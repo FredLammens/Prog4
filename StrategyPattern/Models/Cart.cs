@@ -1,7 +1,6 @@
 ﻿using StrategyPattern.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace StrategyPattern.Models
 {
@@ -12,20 +11,36 @@ namespace StrategyPattern.Models
         {
             this.products = new List<Product>();
         }
-        public void AddProduct(Product product) 
+        public void AddProduct(Product product)
         {
             products.Add(product);
         }
-        public void ClearCart() 
+        public void ClearCart()
         {
             products.Clear();
         }
-        public void MakePayment(IPaymentStrategy strategy) 
+        public void MakePayment(IPaymentStrategy Wallet, IPaymentStrategy Paypal)
+        {
+                foreach (Product product in products)
+                {
+                if (Wallet.Pay(product)) { }
+                else if (Paypal.Pay(product)) { }
+                else 
+                {
+                    System.Console.WriteLine("Al het geld is op ! :(");
+                }
+                }
+        }
+        public void MakePayment(IPaymentStrategy strategy)
         {
             foreach (Product product in products)
             {
-            strategy.Pay(product);
+                strategy.Pay(product);
             }
+        }
+        public int GetFullPrice()
+        {
+            return products.Sum(x => x.GetPrice());
         }
     }
 }

@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace StrategyPattern.Interfaces
+namespace FactoryPattern.Models
 {
-    interface User
+    class EmailRecipient : Recipient
     {
-
     }
 }

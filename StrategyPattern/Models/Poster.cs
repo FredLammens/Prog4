@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StrategyPattern.Models
+﻿namespace StrategyPattern.Models
 {
     class Poster : Product
     {
+        public int price { get; private set; }
         public Poster(int price)
         {
-            this.Price = Price;
+            this.price = price;
         }
     }
 }

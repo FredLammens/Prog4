@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StrategyPattern.Models
+﻿namespace StrategyPattern.Models
 {
     class Sticker : Product
     {
+        public int price { get; private set; }
         public Sticker(int price)
         {
             this.Price = price;

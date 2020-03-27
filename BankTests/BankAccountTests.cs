@@ -47,7 +47,7 @@ namespace BankTests
             {
                 account.Debit(debitAmount);
             }
-            catch (System.ArgumentOutOfRangeException e) 
+            catch (System.ArgumentOutOfRangeException e)
             {
                 //Assert
                 StringAssert.Contains(e.Message, BankAccount.DebitAmountExceedsBalanceMessage);
